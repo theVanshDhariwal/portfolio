@@ -15,8 +15,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-
-
 a {
     text-decoration: none;
 }
@@ -24,10 +22,6 @@ a {
 ul {
     list-style: none;
 }
-
-
-
-/* ================= NAVBAR ================= */
 
 header {
     position: sticky;
@@ -100,8 +94,6 @@ header {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(72, 229, 160, .4);
 }
-
-/* ================= HERO ================= */
 
 .hero {
     width: 90%;
@@ -200,8 +192,6 @@ header {
     box-shadow: 0 15px 30px rgba(72, 229, 160, .4);
 }
 
-/* Review */
-
 .review-card {
 
     position: absolute;
@@ -242,8 +232,6 @@ header {
 
     color: #48e5a0;
 }
-
-/* Social */
 
 .social {
 
@@ -291,8 +279,6 @@ header {
 
     transform: translateX(-8px) rotate(10deg);
 }
-
-/* ================= STATS ================= */
 
 .stats {
 
@@ -364,8 +350,6 @@ header {
 
     color: #bbb;
 }
-
-/*================ ABOUT SECTION ================*/
 
 .about {
 
@@ -467,8 +451,6 @@ header {
     box-shadow: 0 10px 30px rgba(72, 229, 160, .4);
 }
 
-/*================ IMAGE ================*/
-
 .about-image {
 
     position: relative;
@@ -510,8 +492,6 @@ header {
     z-index: 2;
 }
 
-/*================ EXPERIENCE CARD ================*/
-
 .experience-card {
 
     position: absolute;
@@ -550,8 +530,6 @@ header {
 
     line-height: 25px;
 }
-
-/*================ DECORATION ================*/
 
 .circle {
 
@@ -740,8 +718,6 @@ html {
 
 }
 
-/*================ MOBILE MENU ================*/
-
 .menu-btn {
 
     display: none;
@@ -753,8 +729,6 @@ html {
     color: white;
 
 }
-
-/*================ CTA ================*/
 
 .cta {
 
@@ -817,8 +791,6 @@ html {
     transform: translateY(-5px);
 
 }
-
-/*================ FOOTER ================*/
 
 footer {
 
@@ -1105,8 +1077,6 @@ footer hr {
 
 }
 
-/*================ COMMON PAGE BANNER ================*/
-
 .page-banner {
 
     height: 300px;
@@ -1139,8 +1109,6 @@ footer hr {
 
 }
 
-/*================ CONTAINER ================*/
-
 .container {
 
     width: 90%;
@@ -1148,8 +1116,6 @@ footer hr {
     margin: 80px auto;
 
 }
-
-/*================ ABOUT ================*/
 
 .about-grid {
 
@@ -1174,8 +1140,6 @@ footer hr {
     text-align: center;
 
 }
-
-/*================ SERVICES ================*/
 
 .service-grid {
 
@@ -1221,8 +1185,6 @@ footer hr {
 
 }
 
-/*================ PORTFOLIO ================*/
-
 .portfolio-grid {
 
     width: 90%;
@@ -1254,8 +1216,6 @@ footer hr {
     transform: scale(1.05);
 
 }
-
-/*================ BLOG ================*/
 
 .blog-container {
 
@@ -1298,8 +1258,6 @@ footer hr {
     padding: 0 20px 20px;
 
 }
-
-/*================ CONTACT ================*/
 
 .contact-section {
 
@@ -1365,4 +1323,176 @@ footer hr {
 
     cursor: pointer;
 
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+}
+
+.hero,
+.hero-content,
+.hero-image,
+.about,
+.about-text,
+.about-image,
+.cta,
+.footer-content {
+    min-width: 0;
+}
+
+.hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.hero h1 {
+    font-size: clamp(48px, 6.5vw, 95px);
+    line-height: 1.05;
+    overflow-wrap: anywhere;
+}
+
+.hero-text {
+    max-width: 100%;
+}
+
+.hero-image video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(44px, 10vw, 65px);
+        line-height: 1.05;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 550px;
+        margin-inline: auto;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .hero-image video {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .review-card {
+        position: static;
+        margin: 25px auto;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .about {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 40px;
+        gap: 35px;
+    }
+
+    .about-image {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .green-shape {
+        max-width: 100%;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar,
+    .hero,
+    .stats,
+    .about,
+    .cta,
+    .footer-content {
+        width: 92%;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 10vw, 48px);
+        line-height: 1.08;
+        overflow-wrap: normal;
+    }
+
+    .small-heading {
+        font-size: 13px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .hero-image video {
+        width: 100%;
+    }
+
+    .stats {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .about {
+        padding: 25px 18px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .about-list {
+        gap: 0;
+    }
+
+    .experience-card {
+        max-width: 90%;
+        left: 0;
+    }
+
+    .cta {
+        padding: 35px 18px;
+    }
+
+    .cta h2 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .footer-content {
+        gap: 35px;
+    }
 }
